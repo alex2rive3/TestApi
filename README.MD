@@ -18,6 +18,10 @@ git clone https://github.com/alex2rive3/TestApi.git
 cd TestApi
 ```
 
+```
+cd server
+```
+
 - Instala las dependencias:
 
 ```
