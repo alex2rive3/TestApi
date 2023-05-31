@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "dee72ff7-ad9c-4a8b-afa7-52ecd05d2232",
+		"name": "APITEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TestApi}}/posts/",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TestApi}}/posts/5",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json; charset=UTF-8",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"title\": \"Ruta crear\",\r\n    \"body\": \"Esto es una publicacion para verificar el funcionamiento correcto de la ruta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TestApi}}/posts/create",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patching",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Ruta Patching\",\r\n    \"body\": \"Esto es una publicacion para verificar el funcionamiento correcto de la ruta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TestApi}}/posts/patching/11",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"patching",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"title\": \"Ruta Update\",\r\n    \"body\": \"Esto es una publicacion para verificar el funcionamiento correcto de la ruta\"\r\n}"
+				},
+				"url": {
+					"raw": "{{TestApi}}/posts/update/2",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{TestApi}}/posts/delete/2",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "alex.rive@algo.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{TestApi}}/posts/login",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{TestApi}}/posts/logout",
+					"host": [
+						"{{TestApi}}"
+					],
+					"path": [
+						"posts",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "testApi",
+			"value": "http://localhost:8000/api/users/"
+		}
+	]
+}

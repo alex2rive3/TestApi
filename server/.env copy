@@ -1,0 +1,4 @@
+PORT=8000
+URL_BASE=https://jsonplaceholder.typicode.com
+KEY_SECRET=estaEsMiLLaveSecreta2125
+LOCAL_HOST=http://localhost:8000
